@@ -1,3 +1,0 @@
-.\stripe login
-.\stripe listen
-Your webhook signing secret is whsec_ff6a980a4e00ff05cfacd6cfd30cdd13e19e622d2dda33f339724ad5d5de5623
