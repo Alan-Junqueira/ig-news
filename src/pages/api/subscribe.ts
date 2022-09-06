@@ -44,16 +44,15 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         })
       );
 
-      customerId = stripeCustomer.id
+      customerId = stripeCustomer.id;
     }
-
 
     const stripeCheckoutSession = await stripe.checkout.sessions.create({
       // id o stripe, não do faunadb
       customer: customerId,
       payment_method_types: ['card'],
       billing_address_collection: 'required',
-      line_items: [{ price: 'price_1Leee0AySEpuIKw0zjUqYEiw', quantity: 1 }],
+      line_items: [{ price: 'price_1Lf366C3qhuVCmK60M2uEdy4', quantity: 1 }],
       mode: 'subscription',
       allow_promotion_codes: true,
       success_url: process.env.STRIPE_SUCCESS_URL,
